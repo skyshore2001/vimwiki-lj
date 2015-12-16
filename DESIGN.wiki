@@ -13,11 +13,22 @@ vim vimwiki-2-1-LJ.vba
 
 打包
 {{{
-cd src
-vim filelist.txt
-:let g:vimball_home="."
-:%MkVimball vimwiki-2-1-LJ
+./build_it.sh
 }}}
 
-生成`vimwiki-2-1-LJ.vmb`.
+生成`src/vimwiki-lj-{ver}.vmb`.
+
+注意: 如果gvim命令不存在, 请自行设置, 如建立文件`~/bin/gvim`: 
+{{{
+#!/bin/sh
+/mydir/gvim "$@"
+}}}
+
+相当于:
+{{{
+cd src
+gvim filelist.txt
+:let g:vimball_home="."
+:%MkVimball vimwiki-lj-1
+}}}
 
