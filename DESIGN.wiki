@@ -1,0 +1,23 @@
+== 打包和解压用法 ==
+
+解压缩到src目录
+
+注意: 先进入src目录, 然后设置 g:vimball_home后解压.
+
+{{{
+vim vimwiki-2-1-LJ.vba
+:cd src
+:let g:vimball_home="."
+:so %
+}}}
+
+打包
+{{{
+cd src
+vim filelist.txt
+:let g:vimball_home="."
+:%MkVimball vimwiki-2-1-LJ
+}}}
+
+生成`vimwiki-2-1-LJ.vmb`.
+

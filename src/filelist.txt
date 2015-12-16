@@ -1,0 +1,17 @@
+plugin/vimwiki.vim
+doc/vimwiki.txt
+syntax/vimwiki_markdown.vim
+syntax/vimwiki_media.vim
+syntax/vimwiki_default.vim
+syntax/vimwiki.vim
+syntax/vimwiki_markdown_custom.vim
+autoload/vimwiki/style.css
+autoload/vimwiki/tbl.vim
+autoload/vimwiki/default.tpl
+autoload/vimwiki/html.vim
+autoload/vimwiki/markdown_base.vim
+autoload/vimwiki/u.vim
+autoload/vimwiki/diary.vim
+autoload/vimwiki/base.vim
+autoload/vimwiki/lst.vim
+ftplugin/vimwiki.vim
