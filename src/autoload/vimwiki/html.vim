@@ -564,7 +564,7 @@ function! s:process_tags_typefaces(line) "{{{
   " >>> LJ
   " refer to chapter [xxx]
   " refer to chapter "xxx"
-  let line = s:make_tag(line, '\v\c(refer to chapter|²Î¿¼)\s*((\[\zs[^]]+\ze\])|("\zs[^"]+\ze"))', 's:tag_namelink')
+  let line = s:make_tag(line, '\v\c(refer to chapter|å‚è€ƒ)\s*((\[\zs[^]]+\ze\])|("\zs[^"]+\ze"))', 's:tag_namelink')
   return line
 endfunction " }}}
 
@@ -1007,7 +1007,10 @@ function! s:process_tag_h(line, id) "{{{
   if h_level > 0
     let a:id[h_level] += 1
     " reset higher level ids
-    for level in range(h_level+1, 6)
+    " >>> LJ
+    let sub_level = max([g:vimwiki_html_header_numbering, h_level]) +1
+    " <<<
+    for level in range(sub_level, 6)
       let a:id[level] = 0
     endfor
 
