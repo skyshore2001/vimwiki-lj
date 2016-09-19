@@ -371,7 +371,9 @@ function! vimwiki#base#resolve_scheme(lnk, as_html) " {{{ Resolve scheme
     endif
 
     if a:as_html
-      let ext = '.html'
+      if lnk !~ '\.html'
+        let ext = '.html'
+      endif
     else
       if idx == g:vimwiki_current_idx
         let ext = VimwikiGet('ext')
